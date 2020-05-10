@@ -1,0 +1,76 @@
+﻿<Window x:Class="CSharp.Net_FinalProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CSharp.Net_FinalProject"
+        mc:Ignorable="d"
+        Title="PC Budget Planning" Height="380" Width="600">
+    <DockPanel Margin="20">
+
+        <Grid Grid.IsSharedSizeScope="True">
+            
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <!-- Left Side Part CRUD Buttons -->
+            <StackPanel Grid.Row="0" Grid.Column="0" Grid.RowSpan="4">
+                <Button Content="Add Part" Width="80" Height="30" Margin="0,0,0,1" ToolTip="Add a new PC Part into the system." Click="AddPart_Click"/>
+                <Button Content="Edit Part" Width="80" Height="30" Margin="0,0,0,1" ToolTip="Edit a PC Part in the system." Click="EditPart_Click"/>
+                <Button Content="Remove Part" Width="80" Height="30" Margin="0,0,0,1" ToolTip="Remove a PC Part from the system." Click="RemovePart_Click"/>
+            </StackPanel>
+            
+            <!-- Right Side Part Selection ComboBoxes -->
+            <StackPanel Margin="5, 0" Grid.Column="1" Grid.Row="0" Grid.RowSpan="4">
+                <Label>CPU</Label>
+                <ComboBox x:Name="cb_CPU">
+                    <ComboBoxItem>----------------</ComboBoxItem>
+                    <ComboBoxItem>ComboBox Item #2</ComboBoxItem>
+                    <ComboBoxItem>ComboBox Item #3</ComboBoxItem>
+                </ComboBox>
+                <Label>GPU</Label>
+                <ComboBox x:Name="cb_GPU">
+                    <ComboBoxItem>----------------</ComboBoxItem>
+                    <ComboBoxItem>ComboBox Item #2</ComboBoxItem>
+                    <ComboBoxItem>ComboBox Item #3</ComboBoxItem>
+                </ComboBox>
+                <Label>Motherboard</Label>
+                <ComboBox x:Name="cb_MB">
+                    <ComboBoxItem>----------------</ComboBoxItem>
+                    <ComboBoxItem>ComboBox Item #2</ComboBoxItem>
+                    <ComboBoxItem>ComboBox Item #3</ComboBoxItem>
+                </ComboBox>
+                <Label>RAM</Label>
+                <ComboBox x:Name="cb_RAM">
+                    <ComboBoxItem>----------------</ComboBoxItem>
+                    <ComboBoxItem>ComboBox Item #2</ComboBoxItem>
+                    <ComboBoxItem>ComboBox Item #3</ComboBoxItem>
+                </ComboBox>
+                <Label>Storage</Label>
+                <ComboBox x:Name="cb_SSDHDD">
+                    <ComboBoxItem>----------------</ComboBoxItem>
+                    <ComboBoxItem>ComboBox Item #2</ComboBoxItem>
+                    <ComboBoxItem>ComboBox Item #3</ComboBoxItem>
+                </ComboBox>
+
+                <DockPanel Margin="0, 10">
+                    <Button DockPanel.Dock="Left" Width="80" Click="Reset_Click">Reset</Button>
+                    <Label x:Name="lb_TotalCost" DockPanel.Dock="Right" Content="0.00"></Label>
+                    <Label DockPanel.Dock="Right" HorizontalContentAlignment="Right" Content="Total Cost: $"></Label>
+                </DockPanel>
+
+            </StackPanel>
+
+        </Grid>
+
+    </DockPanel>
+    
+</Window>
