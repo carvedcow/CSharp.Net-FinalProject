@@ -44,7 +44,7 @@ namespace CSharp.Net_FinalProject
             cbList.Add(cb_GPU);
             cbList.Add(cb_MB);
             cbList.Add(cb_RAM);
-            cbList.Add(cb_SSDHDD);
+            cbList.Add(cb_Storage);
             foreach (ComboBox cb in cbList)
             {
                 cb.SelectedItem = null;
@@ -55,8 +55,12 @@ namespace CSharp.Net_FinalProject
         private void AddPart_Click(object sender, RoutedEventArgs e)
         {
             AddPart addPart = new AddPart();
+            addPart.Closed += Window_Closed;
             addPart.Show();
+
         }
+
+        
 
         // Edit Part Button
         private void EditPart_Click(object sender, RoutedEventArgs e)
@@ -69,9 +73,44 @@ namespace CSharp.Net_FinalProject
         private void RemovePart_Click(object sender, RoutedEventArgs e)
         {
             RemovePart removePart = new RemovePart();
+            removePart.Closed += Window_Closed;
             removePart.Show();
         }
 
-        
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            //refresh data bindings
+        }
+
+        private void SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            int totalCost = 0;
+            if (cb_CPU.SelectedValue != null)
+            {
+                totalCost += Int32.Parse(cb_CPU.SelectedValue.ToString());
+            }
+
+            if (cb_GPU.SelectedValue != null)
+            {
+                totalCost += Int32.Parse(cb_GPU.SelectedValue.ToString());
+            }
+
+            if (cb_MB.SelectedValue != null)
+            {
+                totalCost += Int32.Parse(cb_MB.SelectedValue.ToString());
+            }
+
+            if (cb_RAM.SelectedValue != null)
+            {
+                totalCost += Int32.Parse(cb_RAM.SelectedValue.ToString());
+            }
+
+            if (cb_Storage.SelectedValue != null)
+            {
+                totalCost += Int32.Parse(cb_Storage.SelectedValue.ToString());
+            }
+
+            lb_TotalCost.Content = totalCost;
+        }
     }
 }

@@ -26,6 +26,7 @@ namespace CSharp.Net_FinalProject
 
         private void OK_Click(object sender, RoutedEventArgs e)
         {
+
             using (var context = new PCContext())
             {
                 var partType = cb_Type.SelectedIndex;

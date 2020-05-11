@@ -32,30 +32,25 @@
             <StackPanel Margin="5, 0" Grid.Column="1" Grid.Row="0" Grid.RowSpan="4">
                 
                 <Label>CPU</Label>
-                <ComboBox x:Name="cb_CPU" ItemsSource="{Binding Path=cpuList}" DisplayMemberPath="Name" SelectedValuePath="Name"/>
+                <ComboBox x:Name="cb_CPU" ItemsSource="{Binding Path=cpuList}" DisplayMemberPath="Name" SelectedValuePath="Cost" SelectionChanged="SelectionChanged"/>
                 
                 <Label>GPU</Label>
-                <ComboBox x:Name="cb_GPU">
-                    <ComboBoxItem>----------------</ComboBoxItem>
-                </ComboBox>
+                <ComboBox x:Name="cb_GPU" ItemsSource="{Binding Path=gpuList}" DisplayMemberPath="Name" SelectedValuePath="Cost" SelectionChanged="SelectionChanged"/>
+                
                 <Label>Motherboard</Label>
-                <ComboBox x:Name="cb_MB">
-                    <ComboBoxItem>----------------</ComboBoxItem>
-                </ComboBox>
+                <ComboBox x:Name="cb_MB" ItemsSource="{Binding Path=mbList}" DisplayMemberPath="Name" SelectedValuePath="Cost" SelectionChanged="SelectionChanged"/>
+                
                 <Label>RAM</Label>
-                <ComboBox x:Name="cb_RAM">
-                    <ComboBoxItem>----------------</ComboBoxItem>
-                </ComboBox>
+                <ComboBox x:Name="cb_RAM" ItemsSource="{Binding Path=ramList}" DisplayMemberPath="Name" SelectedValuePath="Cost" SelectionChanged="SelectionChanged"/>
+                
                 <Label>Storage</Label>
-                <ComboBox x:Name="cb_SSDHDD">
-                    <ComboBoxItem>----------------</ComboBoxItem>
-                </ComboBox>
+                <ComboBox x:Name="cb_Storage" ItemsSource="{Binding Path=storageList}" DisplayMemberPath="Name" SelectedValuePath="Cost" SelectionChanged="SelectionChanged"/>
 
                 <DockPanel Margin="0, 10">
                     <Button DockPanel.Dock="Left" Width="80" Click="Reset_Click">Reset</Button>
-                    <Label x:Name="lb_TotalCost" DockPanel.Dock="Right" Content="0.00"></Label>
+                    <Label x:Name="lb_TotalCost" DockPanel.Dock="Right" Content="0"></Label>
                     <Label DockPanel.Dock="Right" HorizontalContentAlignment="Right" Content="Total Cost: $"></Label>
-                    <Label x:Name="lb_test" DockPanel.Dock="Bottom" Content="{Binding Path=FirstName}"></Label>
+                    <!--<Label x:Name="lb_test" DockPanel.Dock="Bottom" Content="{Binding Path=FirstName}"></Label>-->
                 </DockPanel>
 
             </StackPanel>

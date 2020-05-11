@@ -7,21 +7,26 @@
         mc:Ignorable="d"
         Title="Remove Part" Height="280" Width="300">
     <StackPanel Margin="10">
+        
         <Label Content="Type"></Label>
-        <ComboBox Width="120" HorizontalAlignment="Left">
-            <ComboBoxItem>1</ComboBoxItem>
-            <ComboBoxItem>2</ComboBoxItem>
-            <ComboBoxItem>3</ComboBoxItem>
-            <ComboBoxItem>4</ComboBoxItem>
-            <ComboBoxItem>5</ComboBoxItem>
+        <ComboBox x:Name="cb_Type" Width="120" HorizontalAlignment="Left" SelectionChanged="cb_Type_SelectionChanged">
+            <ComboBoxItem>CPU</ComboBoxItem>
+            <ComboBoxItem>GPU</ComboBoxItem>
+            <ComboBoxItem>MB</ComboBoxItem>
+            <ComboBoxItem>RAM</ComboBoxItem>
+            <ComboBoxItem>Storage</ComboBoxItem>
         </ComboBox>
-        <Label Content="Part"></Label>
-        <ComboBox Width="120" HorizontalAlignment="Left">
-            <ComboBoxItem>1</ComboBoxItem>
-        </ComboBox>
+
+        <Label x:Name="lb_part" Content="Part" Visibility="Collapsed"></Label>
+        <ComboBox x:Name="cb_CPU" ItemsSource="{Binding Path = cpuList}" DisplayMemberPath="Name" SelectedValuePath="Name" Width="120" HorizontalAlignment="Left" Visibility="Collapsed"/>
+        <ComboBox x:Name="cb_GPU" ItemsSource="{Binding Path = gpuList}" DisplayMemberPath="Name" SelectedValuePath="Name" Width="120" HorizontalAlignment="Left" Visibility="Collapsed"/>
+        <ComboBox x:Name="cb_MB" ItemsSource="{Binding Path = mbList}" DisplayMemberPath="Name" SelectedValuePath="Name" Width="120" HorizontalAlignment="Left" Visibility="Collapsed"/>
+        <ComboBox x:Name="cb_RAM" ItemsSource="{Binding Path = ramList}" DisplayMemberPath="Name" SelectedValuePath="Name" Width="120" HorizontalAlignment="Left" Visibility="Collapsed"/>
+        <ComboBox x:Name="cb_Storage" ItemsSource="{Binding Path = storageList}" DisplayMemberPath="Name" SelectedValuePath="Name" Width="120" HorizontalAlignment="Left" Visibility="Collapsed"/>
+        
         <DockPanel>
-            <Button Margin="0, 15" Width="60" HorizontalAlignment="Left">OK</Button>
-            <Button Margin="0, 15" Width="60" HorizontalAlignment="Left">Cancel</Button>
+            <Button Margin="0, 15" Width="60" HorizontalAlignment="Left" Click="OK_Click">OK</Button>
+            <Button Margin="0, 15" Width="60" HorizontalAlignment="Left" Click="Cancel_Click">Cancel</Button>
         </DockPanel>
     </StackPanel>
 </Window>
