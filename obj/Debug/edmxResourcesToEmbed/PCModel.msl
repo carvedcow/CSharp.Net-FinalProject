@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PCModelStoreContainer" CdmEntityContainer="PCContext">
+    <EntitySetMapping Name="CPUs">
+      <EntityTypeMapping TypeName="PCModel.CPU">
+        <MappingFragment StoreEntitySet="CPU">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GPUs">
+      <EntityTypeMapping TypeName="PCModel.GPU">
+        <MappingFragment StoreEntitySet="GPU">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MBs">
+      <EntityTypeMapping TypeName="PCModel.MB">
+        <MappingFragment StoreEntitySet="MB">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RAMs">
+      <EntityTypeMapping TypeName="PCModel.RAM">
+        <MappingFragment StoreEntitySet="RAM">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Storages">
+      <EntityTypeMapping TypeName="PCModel.Storage">
+        <MappingFragment StoreEntitySet="Storage">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

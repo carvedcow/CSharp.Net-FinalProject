@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PCModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CPU">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Brand" Type="varchar" MaxLength="20" />
+    <Property Name="Name" Type="varchar" MaxLength="20" />
+    <Property Name="Cost" Type="int" />
+  </EntityType>
+  <EntityType Name="GPU">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Brand" Type="varchar" MaxLength="20" />
+    <Property Name="Name" Type="varchar" MaxLength="20" />
+    <Property Name="Cost" Type="int" />
+  </EntityType>
+  <EntityType Name="MB">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Brand" Type="varchar" MaxLength="20" />
+    <Property Name="Name" Type="varchar" MaxLength="20" />
+    <Property Name="Cost" Type="int" />
+  </EntityType>
+  <EntityType Name="RAM">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Brand" Type="varchar" MaxLength="20" />
+    <Property Name="Name" Type="varchar" MaxLength="20" />
+    <Property Name="Cost" Type="int" />
+  </EntityType>
+  <EntityType Name="Storage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Brand" Type="varchar" MaxLength="20" />
+    <Property Name="Name" Type="varchar" MaxLength="20" />
+    <Property Name="Cost" Type="int" />
+  </EntityType>
+  <EntityContainer Name="PCModelStoreContainer">
+    <EntitySet Name="CPU" EntityType="Self.CPU" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GPU" EntityType="Self.GPU" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MB" EntityType="Self.MB" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RAM" EntityType="Self.RAM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Storage" EntityType="Self.Storage" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

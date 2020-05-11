@@ -23,3 +23,5 @@ C:\Users\Johnny\source\repos\CSharp.Net-FinalProject\obj\Debug\RemovePart.g.cs
 C:\Users\Johnny\source\repos\CSharp.Net-FinalProject\obj\Debug\AddPart.baml
 C:\Users\Johnny\source\repos\CSharp.Net-FinalProject\obj\Debug\EditPart.baml
 C:\Users\Johnny\source\repos\CSharp.Net-FinalProject\obj\Debug\RemovePart.baml
+C:\Users\Johnny\source\repos\CSharp.Net-FinalProject\obj\Debug\CSharp.Net-FinalProject_Content.g.cs
+C:\Users\Johnny\source\repos\CSharp.Net-FinalProject\obj\Debug\CSharp.Net-FinalProject.csproj.CoreCompileInputs.cache

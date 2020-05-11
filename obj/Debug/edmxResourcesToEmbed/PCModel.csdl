@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PCModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CPU">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Brand" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Cost" Type="Int32" />
+  </EntityType>
+  <EntityType Name="GPU">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Brand" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Cost" Type="Int32" />
+  </EntityType>
+  <EntityType Name="MB">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Brand" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Cost" Type="Int32" />
+  </EntityType>
+  <EntityType Name="RAM">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Brand" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Cost" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Storage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Brand" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Cost" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="PCContext" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CPUs" EntityType="Self.CPU" />
+    <EntitySet Name="GPUs" EntityType="Self.GPU" />
+    <EntitySet Name="MBs" EntityType="Self.MB" />
+    <EntitySet Name="RAMs" EntityType="Self.RAM" />
+    <EntitySet Name="Storages" EntityType="Self.Storage" />
+  </EntityContainer>
+</Schema>

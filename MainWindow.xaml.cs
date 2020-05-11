@@ -22,7 +22,18 @@ namespace CSharp.Net_FinalProject
     {
         public MainWindow()
         {
+            var _mwViewModel = new MainWindowViewModel();
+            //_mwViewModel.FirstName = "John";
+            DataContext = _mwViewModel;
+            //_mwViewModel.FirstName = "Mark";
+            //_mwViewModel.OnPropertyChanged(nameof(_mwViewModel.FirstName));
             InitializeComponent();
+        }
+
+        // On Load
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+
         }
 
         // Resets all combobox selected items to null
@@ -60,5 +71,7 @@ namespace CSharp.Net_FinalProject
             RemovePart removePart = new RemovePart();
             removePart.Show();
         }
+
+        
     }
 }

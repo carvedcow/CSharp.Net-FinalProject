@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSharp.Net_FinalProject"
         mc:Ignorable="d"
-        Title="PC Budget Planning" Height="380" Width="600">
+        Title="PC Budget Planning" Height="380" Width="600" Loaded="Window_Loaded">
     <DockPanel Margin="20">
 
         <Grid Grid.IsSharedSizeScope="True">
@@ -30,10 +30,10 @@
             
             <!-- Right Side Part Selection ComboBoxes -->
             <StackPanel Margin="5, 0" Grid.Column="1" Grid.Row="0" Grid.RowSpan="4">
+                
                 <Label>CPU</Label>
-                <ComboBox x:Name="cb_CPU">
-                    <ComboBoxItem>----------------</ComboBoxItem>
-                </ComboBox>
+                <ComboBox x:Name="cb_CPU" ItemsSource="{Binding Path=cpuList}" DisplayMemberPath="Name" SelectedValuePath="Name"/>
+                
                 <Label>GPU</Label>
                 <ComboBox x:Name="cb_GPU">
                     <ComboBoxItem>----------------</ComboBoxItem>
@@ -55,6 +55,7 @@
                     <Button DockPanel.Dock="Left" Width="80" Click="Reset_Click">Reset</Button>
                     <Label x:Name="lb_TotalCost" DockPanel.Dock="Right" Content="0.00"></Label>
                     <Label DockPanel.Dock="Right" HorizontalContentAlignment="Right" Content="Total Cost: $"></Label>
+                    <Label x:Name="lb_test" DockPanel.Dock="Bottom" Content="{Binding Path=FirstName}"></Label>
                 </DockPanel>
 
             </StackPanel>

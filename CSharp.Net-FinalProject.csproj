@@ -47,6 +47,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -65,8 +67,39 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CPU.cs">
+      <DependentUpon>PCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GPU.cs">
+      <DependentUpon>PCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindowViewModel.cs" />
+    <Compile Include="MB.cs">
+      <DependentUpon>PCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PCModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PCModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PCModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PCModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PCModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="RAM.cs">
+      <DependentUpon>PCModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="RemovePart.xaml.cs">
       <DependentUpon>RemovePart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Storage.cs">
+      <DependentUpon>PCModel.tt</DependentUpon>
     </Compile>
     <Page Include="AddPart.xaml">
       <SubType>Designer</SubType>
@@ -118,6 +151,13 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <EntityDeploy Include="PCModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>PCModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="PCModel.edmx.diagram">
+      <DependentUpon>PCModel.edmx</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -125,6 +165,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PCModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PCModel.edmx</DependentUpon>
+      <LastGenOutput>PCModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="PCModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PCModel.edmx</DependentUpon>
+      <LastGenOutput>PCModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
