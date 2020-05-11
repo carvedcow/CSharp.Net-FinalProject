@@ -5,8 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSharp.Net_FinalProject"
         mc:Ignorable="d"
-        Title="EditPart" Height="450" Width="800">
-    <Grid>
+        Title="Edit Part" Height="250" Width="300">
+    <StackPanel Margin="10">
+        <Label Content="Type"></Label>
+        <ComboBox Width="120" HorizontalAlignment="Left">
+            <ComboBoxItem>1</ComboBoxItem>
+            <ComboBoxItem>2</ComboBoxItem>
+            <ComboBoxItem>3</ComboBoxItem>
+            <ComboBoxItem>4</ComboBoxItem>
+            <ComboBoxItem>5</ComboBoxItem>
+        </ComboBox>
+        <Label Content="Brand"></Label>
+        <TextBox Width="120" HorizontalAlignment="Left"></TextBox>
+        <Label Content="Series"></Label>
+        <TextBox Width="120" HorizontalAlignment="Left"></TextBox>
+        <Label Content="Name"></Label>
+        <TextBox Width="120" HorizontalAlignment="Left"></TextBox>
         
-    </Grid>
+    </StackPanel>
 </Window>

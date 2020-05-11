@@ -5,8 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSharp.Net_FinalProject"
         mc:Ignorable="d"
-        Title="AddPart" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Add Part" Height="280" Width="300">
+    <StackPanel Margin="10">
+        <Label Content="Type"></Label>
+        <ComboBox Width="120" Height="20" HorizontalAlignment="Left">
+            <ComboBoxItem>1</ComboBoxItem>
+            <ComboBoxItem>2</ComboBoxItem>
+            <ComboBoxItem>3</ComboBoxItem>
+            <ComboBoxItem>4</ComboBoxItem>
+            <ComboBoxItem>5</ComboBoxItem>
+        </ComboBox>
+        <Label Content="Brand"></Label>
+        <TextBox Width="120" Height="20" HorizontalAlignment="Left"></TextBox>
+        <Label Content="Name"></Label>
+        <TextBox Width="120" Height="20" HorizontalAlignment="Left"></TextBox>
+        <Label Content="Cost"></Label>
+        <TextBox Width="120" Height="20" HorizontalAlignment="Left"></TextBox>
+        <DockPanel>
+            <Button Margin="0, 15" Width="60" HorizontalAlignment="Left">OK</Button>
+            <Button Margin="0, 15" Width="60" HorizontalAlignment="Left">Cancel</Button>
+        </DockPanel>
+    </StackPanel>
 </Window>

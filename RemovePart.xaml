@@ -5,8 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSharp.Net_FinalProject"
         mc:Ignorable="d"
-        Title="RemovePart" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Remove Part" Height="280" Width="300">
+    <StackPanel Margin="10">
+        <Label Content="Type"></Label>
+        <ComboBox Width="120" HorizontalAlignment="Left">
+            <ComboBoxItem>1</ComboBoxItem>
+            <ComboBoxItem>2</ComboBoxItem>
+            <ComboBoxItem>3</ComboBoxItem>
+            <ComboBoxItem>4</ComboBoxItem>
+            <ComboBoxItem>5</ComboBoxItem>
+        </ComboBox>
+        <Label Content="Part"></Label>
+        <ComboBox Width="120" HorizontalAlignment="Left">
+            <ComboBoxItem>1</ComboBoxItem>
+        </ComboBox>
+        <DockPanel>
+            <Button Margin="0, 15" Width="60" HorizontalAlignment="Left">OK</Button>
+            <Button Margin="0, 15" Width="60" HorizontalAlignment="Left">Cancel</Button>
+        </DockPanel>
+    </StackPanel>
 </Window>
